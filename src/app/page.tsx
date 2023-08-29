@@ -92,7 +92,7 @@ export default function Home() {
       {/* FAQ Section Start */}
       <div className="faq-section">
         <h2>FAQ</h2>
-        <div className="faq-content" contentEditable={true}>
+        <div className="faq-content">
           {'Q: What does Max Depth mean in the context of a tree?'}
           <br />
           {'A: The Max Depth is the maximum number of hops it takes to get from any leaf to the root of the tree. This determines the maximum number of nodes (or pieces of data) the tree can store. 2^Max Depth = Max Number of Nodes.'}
