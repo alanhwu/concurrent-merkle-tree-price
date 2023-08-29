@@ -45,6 +45,13 @@ export default function Home() {
     }
   };
 
+  const formatBytes = (bytes: number) => {
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    if (bytes === 0) return '0 Byte';
+    const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)).toString());
+    return Math.round(bytes / Math.pow(1024, i)) + ' ' + sizes[i];
+  };  
+
   return (
     <div className="container">
       <h1 className="header-text">Solana Concurrent Merkle Tree Prices</h1>
@@ -71,7 +78,7 @@ export default function Home() {
             <td>{row.maxDepth}</td>
             <td>{row.maxBufferSize}</td>
             <td>{row.canopyDepth}</td>
-            <td>{row.requiredSpace}</td>
+            <td>{formatBytes(row.requiredSpace)}</td>
             <td>{(row.storageCost / LAMPORTS_PER_SOL).toFixed(4)}</td>
             <td>{'$' + formatPrice(row.storageCost / LAMPORTS_PER_SOL * solPrice)}</td>
             <td>{formatSmallNumber((row.storageCost * 1000 / LAMPORTS_PER_SOL) / (2 ** row.maxDepth))}</td>
