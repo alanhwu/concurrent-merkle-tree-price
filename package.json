@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@solana/spl-account-compression": "^0.1.10",
+    "@solana/web3.js": "^1.78.4",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
