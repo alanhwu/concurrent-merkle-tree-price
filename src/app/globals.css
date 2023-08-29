@@ -25,3 +25,68 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* General container style */
+.container {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.table th, .table td {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.table thead tr {
+  border-bottom: 2px solid #000;
+}
+
+/* Header styles */
+.header-text {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.header-description {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+/* Solana Price Style */
+.sol-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.faq-section {
+  margin-top: 50px;
+  border-top: 1px solid rgb(var(--foreground-rgb), 0.1);
+  padding-top: 30px;
+}
+
+.faq-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.faq-content {
+  min-height: 100px;
+  border: 1px solid rgb(var(--foreground-rgb), 0.1);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.faq-content:focus {
+  outline: none;
+  border: 1px solid rgb(var(--foreground-rgb));
+}

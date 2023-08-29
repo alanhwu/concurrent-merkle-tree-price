@@ -3,7 +3,6 @@ const { clusterApiUrl, Connection } = require('@solana/web3.js');
 const { getConcurrentMerkleTreeAccountSize } = require('@solana/spl-account-compression');
 
 export default async function handler(req : any, res : any) {
-  //const ENDPOINT = clusterApiUrl('https://api.vip.mainnet-beta.solana.com');
   const connection = new Connection('https://api.vip.mainnet-beta.solana.com');
 
   const ALL_DEPTH_SIZE_PAIRS : { maxDepth: number; maxBufferSize: number }[] = [
